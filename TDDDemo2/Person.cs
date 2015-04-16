@@ -10,10 +10,11 @@ namespace TDDDemo2
     {
         public string FirstName;
         public string LastName;
-        public string Name { get{ return LastName + FirstName }}
-        public int age { get; set; }
+        public string Name { get { return LastName + FirstName; } }
+        public int Age { get; set; }
+        public bool? CanVote { get; set; }
+        public int SocSecNum { get; set; } 
         
-        public DateTime age { get { return } }
         public object CalculateAge(DateTime input)
         {
             throw new NotImplementedException();
