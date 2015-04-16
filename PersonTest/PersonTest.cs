@@ -52,9 +52,10 @@ namespace PersonTest
             var engine = new Person();
             engine.FirstName = "Justin";
             engine.LastName = "Langley";
-            var lastThenFirst = engine.LastName + engine.FirstName;
+            var testName = engine.FirstName + " " + engine.LastName;
+            var lastThenFirst = engine.LastName + " " + engine.FirstName;
             var expected = lastThenFirst;
-            var answer = engine.FormatToLastthenFirst(expected);
+            var answer = engine.FormatToLastthenFirst(testName);
 
             Assert.Equal(expected, answer);
         }
@@ -64,10 +65,11 @@ namespace PersonTest
             var engine = new Person();
             engine.FirstName = "Justin";
             engine.LastName = "Langley";
-            var nameFormat = String.Format("{0}", "{1}", engine.FirstName, engine.LastName);
-            var answer = engine.IsStringFirstNameLastName();
-
-            Assert.Equal(nameFormat, answer);
+            var testName = engine.LastName + " " + engine.FirstName;
+            var firstThenLast = engine.FirstName + " " + engine.LastName;
+            var answer = engine.IsStringFirstNameLastName(testName);
+            var expected = firstThenLast;
+            Assert.Equal(expected, answer);
         }
 
 
