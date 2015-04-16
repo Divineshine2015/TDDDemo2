@@ -10,7 +10,7 @@ namespace TDDDemo2
     {
         public string FirstName;
         public string LastName;
-        public string name{get{return (LastName + FirstName); } }
+        public string Name{get{return (LastName + FirstName); } }
 
         
 
@@ -54,7 +54,17 @@ namespace TDDDemo2
 
         public object CanNameBeChanged(string name)
         {
-            throw new NotImplementedException();
+           var fName="Jon";
+            var lName ="Reed";
+
+            var newName=fName+lName;
+            
+            if (name != newName)
+            {
+                return newName;
+            }
+
+            return name;
         }
 
         public object IsStringFirstNameLastName()
