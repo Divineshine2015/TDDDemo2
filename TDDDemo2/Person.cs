@@ -11,13 +11,18 @@ namespace TDDDemo2
         public string FirstName;
         public string LastName;
         public string Name { get { return LastName + FirstName; } }
-        public int Age { get; set; }
+        private int Age { get { return (DateTime.Now.Year - BirthDate.Year); } }
+        private DateTime BirthDate { get; set; }
         public bool? CanVote { get; set; }
         public int SocSecNum { get; set; } 
         
-        public object CalculateAge(DateTime input)
+        public int CalculateAge(DateTime input)
+
         {
-            throw new NotImplementedException();
+            BirthDate = input;
+
+            return Age;
         }
+
     }
 }
