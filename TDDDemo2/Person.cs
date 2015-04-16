@@ -89,5 +89,30 @@ namespace TDDDemo2
             string answer = lastThenFirst[1] + " " + lastThenFirst[0];
             return answer; 
         }
+
+        int IComparable<Person>.CompareTo(Person other)
+        {
+            if (this.LastName != other.LastName)
+            {
+                return String.Compare(this.LastName, other.LastName);
+            }
+            else
+            {
+                if (this.BirthDate > other.BirthDate)
+                {
+                    return 1;
+                }
+                if (this.BirthDate < other.BirthDate)
+                {
+                    return -1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            
+            
+        }
     }
 }
