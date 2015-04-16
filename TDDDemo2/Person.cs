@@ -8,5 +8,9 @@ namespace TDDDemo2
 {
     public class Person
     {
+        public string FirstName;
+        public string LastName;
+        string Name = FirstName + LastName;
+
     }
 }
