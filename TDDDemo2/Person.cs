@@ -10,9 +10,13 @@ namespace TDDDemo2
     {
         public string FirstName;
         public string LastName;
-        public string Name { get { return LastName + FirstName; } }
+        public string name{get{return (LastName + FirstName); } }
+
+        
+
         private int Age { get { return (DateTime.Now.Year - BirthDate.Year); } }
         private DateTime BirthDate { get; set; }
+
         public bool CanVote { get; set; }
         public int SocSecNum { get; set; } 
         
@@ -36,6 +40,15 @@ namespace TDDDemo2
                 CanVote = false;
             }
             return CanVote;
+        }
+        
+       
+            
+         public string CanNameBeChanges(string nameToChange)
+        {
+
+
+            return nameToChange;
         }
 
     }
