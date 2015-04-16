@@ -51,5 +51,15 @@ namespace TDDDemo2
             return nameToChange;
         }
 
+
+        public object CanNameBeChanged(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object IsStringFirstNameLastName()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

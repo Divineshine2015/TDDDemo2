@@ -29,21 +29,34 @@ namespace PersonTest
           
             var age=17;
             var engine = new Person();
-            var answer = engine.CanPersonVote(age);
-
-            
+            var answer = engine.CanPersonVote(age);          
             var expected =false;
 
             Assert.Equal(expected, answer);
         }
 
-        //[Fact]
-        //public void SocialSecNumIsValid()
-        //{
-        //    var SocSecNum = "?!@#$&*()";
-        //    Assert.
-        //}
+        [Fact]
+        public void CanPersonNameBeChanged()
+        {
+            var engine = new Person();
+            engine.FirstName = "Justin";
+            engine.LastName = "Langley";
+            var name = engine.Name;
+            var answer = engine.CanNameBeChanged(name);
 
+            Assert.NotEqual(name, answer);
+        }
+        [Fact]
+        public void FirstNameLastNameStringFormat()
+        {
+            var engine = new Person();
+            engine.FirstName = "Justin";
+            engine.LastName = "Langley";
+            var nameFormat = String.Format("{0}", "{1}", engine.FirstName, engine.LastName);
+            var answer = engine.IsStringFirstNameLastName();
+
+            Assert.Equal(nameFormat, answer);
+        }
 
         
     }
