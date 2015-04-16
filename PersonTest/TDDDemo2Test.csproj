@@ -6,14 +6,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{24B157E9-51AA-4B97-B1BC-B64977917149}</ProjectGuid>
+    <ProjectGuid>{6BBD190E-1DEF-46EE-8064-ED1E3CA5885A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TDDDemo2</RootNamespace>
-    <AssemblyName>TDDDemo2</AssemblyName>
+    <RootNamespace>PersonTest</RootNamespace>
+    <AssemblyName>PersonTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>c4d94abc</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>3cd77cbc</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,11 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Person.cs" />
+    <Compile Include="PersonTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TDDDemo2\TDDDemo2.csproj">
+      <Project>{24b157e9-51aa-4b97-b1bc-b64977917149}</Project>
+      <Name>TDDDemo2</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
