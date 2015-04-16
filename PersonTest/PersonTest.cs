@@ -47,6 +47,18 @@ namespace PersonTest
             Assert.NotEqual(name, answer);
         }
         [Fact]
+        public void FormatLastNameFirst()
+        {
+            var engine = new Person();
+            engine.FirstName = "Justin";
+            engine.LastName = "Langley";
+            var lastThenFirst = engine.LastName + engine.FirstName;
+            var expected = lastThenFirst;
+            var answer = engine.CanNameBeChanged(expected);
+
+            Assert.Equal(expected, answer);
+        }
+        [Fact]
         public void FirstNameLastNameStringFormat()
         {
             var engine = new Person();
@@ -57,6 +69,7 @@ namespace PersonTest
 
             Assert.Equal(nameFormat, answer);
         }
+
 
         
     }
