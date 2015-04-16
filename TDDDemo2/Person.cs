@@ -12,7 +12,12 @@ namespace TDDDemo2
         public string LastName;
         public string Name{get{return (LastName + FirstName); } }
 
-        
+        //Person JustinLangley = new Person();
+        //    {
+        //        this.FirstName = "Justin",
+        //        this.LastName = "Langley",
+        //        this.Age = 35, 5/4/1979, true, 123456789
+        //    }
 
         private int Age { get { return (DateTime.Now.Year - BirthDate.Year); } }
         private DateTime BirthDate { get; set; }
@@ -42,19 +47,10 @@ namespace TDDDemo2
             return CanVote;
         }
         
-       
-            
-         public string CanNameBeChanges(string nameToChange)
-        {
-
-
-            return nameToChange;
-        }
-
 
         public object CanNameBeChanged(string name)
-        {
-           var fName="Jon";
+            {
+            var fName="Jon";
             var lName ="Reed";
 
             var newName=fName+lName;
@@ -67,9 +63,19 @@ namespace TDDDemo2
             return name;
         }
 
-        public object IsStringFirstNameLastName()
+    
+        public object IsStringFirstNameLastName(string lastThenFirst)
+            {
+                string [] firstThenLast = lastThenFirst.Split(' ');
+                string answer = firstThenLast[1] + " " + firstThenLast[0];
+                return answer;              
+            }
+
+        public object FormatToLastthenFirst(string firstThenLast)
         {
-            throw new NotImplementedException();
+            string[] lastThenFirst = firstThenLast.Split(' ');
+            string answer = lastThenFirst[1] + " " + lastThenFirst[0];
+            return answer; 
         }
     }
 }
