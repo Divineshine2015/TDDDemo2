@@ -6,18 +6,30 @@ using System.Threading.Tasks;
 
 namespace TDDDemo2
 {
-    public class Person
+    public class Person : IComparable<Person>
     {
         public string FirstName;
         public string LastName;
         public string Name{get{return (LastName + FirstName); } }
 
-        //Person JustinLangley = new Person();
-        //    {
-        //        this.FirstName = "Justin",
-        //        this.LastName = "Langley",
-        //        this.Age = 35, 5/4/1979, true, 123456789
-        //    }
+        Person JustinLangley = new Person()
+            {
+                FirstName = "Justin",
+                LastName = "Langley",
+                BirthDate = new DateTime(1979, 5, 4),
+                CanVote = true,
+                SocSecNum = 123456789
+            };
+
+        Person JonReed = new Person()
+            {
+                FirstName = "Jonathan",
+                LastName = "Reed",
+                BirthDate = new DateTime(1978, 7, 27),
+                CanVote = true,
+                SocSecNum = 987654321
+            };
+        
 
         private int Age { get { return (DateTime.Now.Year - BirthDate.Year); } }
         private DateTime BirthDate { get; set; }
