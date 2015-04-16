@@ -54,7 +54,7 @@ namespace PersonTest
             engine.LastName = "Langley";
             var lastThenFirst = engine.LastName + engine.FirstName;
             var expected = lastThenFirst;
-            var answer = engine.CanNameBeChanged(expected);
+            var answer = engine.FormatToLastthenFirst(expected);
 
             Assert.Equal(expected, answer);
         }
