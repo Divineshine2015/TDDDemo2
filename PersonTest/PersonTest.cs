@@ -22,9 +22,7 @@ namespace PersonTest
             Assert.Equal(expected, answer);
         }
 
-<<<<<<< HEAD
-       
-=======
+
         [Fact]
         public void TestCanPersonVote()
         {
@@ -38,7 +36,7 @@ namespace PersonTest
 
             Assert.Equal(expected, answer);
         }
->>>>>>> origin/JDLBranch1
+
         //[Fact]
         //public void SocialSecNumIsValid()
         //{

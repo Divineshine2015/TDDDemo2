@@ -13,7 +13,7 @@ namespace TDDDemo2
         public string Name { get { return LastName + FirstName; } }
         private int Age { get { return (DateTime.Now.Year - BirthDate.Year); } }
         private DateTime BirthDate { get; set; }
-        public bool? CanVote { get; set; }
+        public bool CanVote { get; set; }
         public int SocSecNum { get; set; } 
         
         public int CalculateAge(DateTime input)
@@ -23,17 +23,19 @@ namespace TDDDemo2
 
             return Age;
         }
-        public void CanPersonVote()
+        public bool CanPersonVote(int age)
         {
-            var PersonAge = this.Age;
+            var PersonAge = age;
             if (PersonAge >= 18)
+           
             {
-                bool CanVote = true;
+                CanVote = true;
             }
             else
             {
-                bool CanVote = false;
+                CanVote = false;
             }
+            return CanVote;
         }
 
     }
