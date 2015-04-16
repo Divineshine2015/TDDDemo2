@@ -22,7 +22,23 @@ namespace PersonTest
             Assert.Equal(expected, answer);
         }
 
+<<<<<<< HEAD
        
+=======
+        [Fact]
+        public void TestCanPersonVote()
+        {
+          
+            var age=17;
+            var engine = new Person();
+            var answer = engine.CanPersonVote(age);
+
+            
+            var expected =false;
+
+            Assert.Equal(expected, answer);
+        }
+>>>>>>> origin/JDLBranch1
         //[Fact]
         //public void SocialSecNumIsValid()
         //{
