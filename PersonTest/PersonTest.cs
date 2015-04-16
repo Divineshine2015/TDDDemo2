@@ -22,20 +22,7 @@ namespace PersonTest
             Assert.Equal(expected, answer);
         }
 
-        //[Fact]
-        //public void CanPersonVote()
-        //{
-        //    int Age = 20;
-        //    if (Age => 18)
-        //    {
-        //        bool CanVote = true;
-        //    }
-        //    else
-        //    {
-        //        bool CanVote = false;
-        //    }
-        //    Assert.True(CanVote);
-        //}
+       
         //[Fact]
         //public void SocialSecNumIsValid()
         //{

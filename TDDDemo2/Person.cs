@@ -23,6 +23,18 @@ namespace TDDDemo2
 
             return Age;
         }
+        public void CanPersonVote()
+        {
+            var PersonAge = this.Age;
+            if (PersonAge >= 18)
+            {
+                bool CanVote = true;
+            }
+            else
+            {
+                bool CanVote = false;
+            }
+        }
 
     }
 }
