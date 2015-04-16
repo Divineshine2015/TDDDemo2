@@ -71,7 +71,12 @@ namespace PersonTest
             var expected = firstThenLast;
             Assert.Equal(expected, answer);
         }
+        [Fact]
+        public void DoesIComparableWork()
+        {
 
+
+        }
 
         
     }
