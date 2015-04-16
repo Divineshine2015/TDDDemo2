@@ -13,11 +13,11 @@ namespace PersonTest
         [Fact]
         public void DoesAgeValueGetComputed()
         {
-            var input = DateTime("1/1/1990");
+            var input = new DateTime(1/1/1990);
             var engine = new Person();
             var answer = engine.CalculateAge(input);
             var now = DateTime.Now;
-            var expected = now - input;
+            var expected = now.Year - input.Year;
             Assert.Equal(expected, answer);
         }
 
